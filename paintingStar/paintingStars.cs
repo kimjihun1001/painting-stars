@@ -220,7 +220,8 @@ namespace paintingStars
 
         static void Main(string[] args)
         {
-            while (true)
+            bool keep = true;
+            while (keep)
             {
                 Console.WriteLine("1: 피라미드");
                 Console.WriteLine("2: 고드름");
@@ -237,7 +238,12 @@ namespace paintingStars
                 PaintStar(inputToInt, mode);
                 Console.WriteLine("계속 하시겠습니까? Y/N");
                 string answer = Console.ReadLine();
-                //if (answer == )
+
+                if (answer == "n" || answer == "N")
+                {
+                    Console.WriteLine("별그리기를 종료합니다");
+                    keep = false;
+                }
             }
             
 
