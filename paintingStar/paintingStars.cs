@@ -203,9 +203,16 @@ namespace paintingStars
                             }
                         }
                         break;
-                    //default:
-                    //    Console.WriteLine("모드 선택을 잘못했습니다.");
-                    //    break;
+
+                        default:
+                        Console.WriteLine("모드 선택을 잘못했습니다.");
+                        mode = Console.ReadLine();
+                        Console.Write("자연수를 입력하세요: ");
+                        string input = Console.ReadLine();
+                        inputToInt = int.Parse(input);
+                        PaintStar(inputToInt, mode);
+
+                        break;
 
                 }
                 
@@ -231,6 +238,7 @@ namespace paintingStars
                 Console.Write("별찍기 모드를 선택하세요: ");
                 string mode = Console.ReadLine();
 
+
                 Console.Write("자연수를 입력하세요: ");
                 string input = Console.ReadLine();
                 int inputToInt = int.Parse(input);
@@ -243,6 +251,10 @@ namespace paintingStars
                 {
                     Console.WriteLine("별그리기를 종료합니다");
                     keep = false;
+                }
+                else
+                {
+                    Console.Clear();
                 }
             }
             
